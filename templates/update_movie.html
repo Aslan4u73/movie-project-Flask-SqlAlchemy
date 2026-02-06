@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Update Movie: {{ movie.name }}</h2>
+<form action="{{ url_for('update_movie', user_id=user.id, movie_id=movie.id) }}" method="POST" class="movie-form">
+    <div class="form-group">
+        <label for="name">Title</label>
+        <input type="text" id="name" name="name" value="{{ movie.name }}" required>
+    </div>
+    <div class="form-group">
+        <label for="director">Director</label>
+        <input type="text" id="director" name="director" value="{{ movie.director or '' }}">
+    </div>
+    <div class="form-group">
+        <label for="year">Year</label>
+        <input type="number" id="year" name="year" value="{{ movie.year or '' }}">
+    </div>
+    <div class="form-group">
+        <label for="rating">Rating</label>
+        <input type="number" id="rating" name="rating" step="0.1" min="0" max="10" value="{{ movie.rating or '' }}">
+    </div>
+    <button type="submit" class="btn">Save Changes</button>
+    <a href="{{ url_for('user_movies', user_id=user.id) }}" class="btn btn-back">Cancel</a>
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Movie for {{ user.name }}</h2>
+<p>Enter a movie title and we will fetch the details from OMDb.</p>
+<form action="{{ url_for('add_movie', user_id=user.id) }}" method="POST" class="movie-form">
+    <div class="form-group">
+        <label for="title">Movie Title</label>
+        <input type="text" id="title" name="title" placeholder="e.g. Inception" required>
+    </div>
+    <button type="submit" class="btn">Add Movie</button>
+    <a href="{{ url_for('user_movies', user_id=user.id) }}" class="btn btn-back">Cancel</a>
+</form>
+{% endblock %}

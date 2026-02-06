@@ -1,0 +1,258 @@
+/* Movie Web App - Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+/* Navigation */
+nav {
+    background-color: #34495e;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Main content */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Flash messages */
+.flash-messages {
+    list-style: none;
+    padding: 0;
+}
+
+.flash-messages li {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #c3e6cb;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-back {
+    background-color: #95a5a6;
+}
+
+.btn-back:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+/* User list */
+.user-list {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-list a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.user-list a:hover {
+    color: #3498db;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+/* Movie grid */
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+.movie-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 12px;
+}
+
+.movie-info h3 {
+    font-size: 0.95em;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.movie-info p {
+    font-size: 0.8em;
+    color: #7f8c8d;
+    margin-bottom: 3px;
+}
+
+.movie-actions {
+    padding: 8px 12px 12px;
+    display: flex;
+    gap: 5px;
+}
+
+/* Error page */
+.error-page {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.error-page h2 {
+    font-size: 3em;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.error-page p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Section titles */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* No poster placeholder */
+.no-poster {
+    width: 100%;
+    height: 280px;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #95a5a6;
+    font-size: 0.9em;
+}
