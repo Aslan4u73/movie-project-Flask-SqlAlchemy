@@ -1,16 +1,20 @@
 import os
+import secrets
 import requests
 from flask import Flask, render_template, request, redirect, url_for, flash
+from dotenv import load_dotenv
 from models import db
 from data_manager import DataManager
 
+load_dotenv()
+
 # OMDb API configuration
-API_KEY = "61bf20b9"
+API_KEY = os.getenv("OMDB_API_KEY", "")
 API_URL = "http://www.omdbapi.com/"
 
 # Create Flask app
 app = Flask(__name__)
-app.secret_key = "moviweb-secret-key-2024"
+app.secret_key = os.getenv("SECRET_KEY", secrets.token_hex(16))
 
 # Database configuration
 basedir = os.path.abspath(os.path.dirname(__file__))
